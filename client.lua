@@ -75,7 +75,7 @@ function spawnCase(source)
 
 		while nbObjetsCrees < 1 do
 			printDebug("case x: " .. pos.x ..", y: " .. pos.y ..", z: " .. pos.z)
-			local coke1 = CreateObject(GetHashKey("prop_drug_package"), pos.x, pos.y, pos.z, true, true, true) -- https://gist.github.com/leonardosnt/53faac01a38fc94505e9
+			local coke1 = CreateObject(GetHashKey("prop_drug_package"), pos.x, pos.y, pos.z, true, true, true) -- list https://gist.github.com/leonardosnt/53faac01a38fc94505e9
 			PlaceObjectOnGroundProperly(coke1)
 			nbObjetsCrees = nbObjetsCrees + 1
 			printDebug("Wsadzono pake")
@@ -136,11 +136,10 @@ CreateThread(function()
 	
     while true do
 		local playerPed = PlayerPedId() -- pedId zmienia się po śmierci, dlatego musi być w pętli! (chyba, że będzie aktualizowany przy respawnie)
-		printDebug(playerPed)
 		globalPos = GetEntityCoords(playerPed) -- get the position of the local player ped
 		GiveWeaponToPed(playerPed, weapon, 100, false) -- darmowe ammmo co sekunde
         Wait(1000)
-    end
+	end
 end)
  
 

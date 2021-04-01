@@ -1,3 +1,4 @@
+-- https://forum.cfx.re/t/how-to-json-with-fivem/237542 
 function isPlayer(source)
 	return source > 0
 end
