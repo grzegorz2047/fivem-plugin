@@ -12,6 +12,6 @@ AddEventHandler('minigame:teleportEvent',
 		SetEntityCoords(ped, 1972, 2573, 3, false, false, false, true)
 		
 		currentPos = GetEntityCoords(ped)
-		TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, "Przeteleportowano!")
+		TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, "Przeteleportowano do " .. currentPos)
 	end
 )
