@@ -9,7 +9,7 @@ RegisterCommand("tep", function(source --[[ this is the player ID (on the server
 		return false
 	end
 	 
-	TriggerClientEvent("minigame:teleportEvent", source, {"1"})
+	TriggerClientEvent("minigame:teleportEvent", source, args)
 end, false)
  
 
