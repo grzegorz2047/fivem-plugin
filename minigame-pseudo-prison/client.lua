@@ -1,4 +1,4 @@
-local pointOnMap = vector3(1972, 2573, 2)
+local pointOnMap = vector3(-1972.0, 2573.0, 4.0)
 Citizen.CreateThread(
     function()
         while true do
