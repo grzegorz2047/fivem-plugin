@@ -1,3 +1,8 @@
+RegisterServerEvent('baseevents:onPlayerDied')
+RegisterServerEvent('baseevents:onPlayerKilled')
+RegisterServerEvent('baseevents:onPlayerWasted')
+
+
 AddEventHandler('baseevents:onPlayerDied', function(player, data)
 		print( "onPlayerDied srv")
 	end
