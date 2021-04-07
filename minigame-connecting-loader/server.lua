@@ -14,6 +14,7 @@ local function OnPlayerConnecting(name, setKickReason, deferrals)
     deferrals.update(string.format("Hello %s. Your Steam ID is being checked.", name))
 
     for _, v in pairs(identifiers) do
+        print(v)
         if string.find(v, "steam") then
             steamIdentifier = v
             break
