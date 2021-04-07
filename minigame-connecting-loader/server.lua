@@ -31,3 +31,7 @@ local function OnPlayerConnecting(name, setKickReason, deferrals)
 end
 
 AddEventHandler("playerConnecting", OnPlayerConnecting)
+
+AddEventHandler("playerSpawned", function(spawn)
+    TriggerServerEvent("ldr:spawnplayer")	
+end)
