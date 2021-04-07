@@ -4,15 +4,15 @@ RegisterServerEvent('baseevents:onPlayerWasted')
 
 
 AddEventHandler('baseevents:onPlayerDied', function(player, data)
-		print( "onPlayerDied srv" .. data)
+		print(  data)
 	end
 )
 AddEventHandler('baseevents:onPlayerKilled', function(player, data)
      
-    print( 'You was killed by ' .. data .. '.')
+    print(  data  )
 end)
 AddEventHandler('baseevents:onPlayerWasted', 
 	function(player, data)
-		print( "onPlayerWasted srv" .. data)
+		print(   data)
 	end
 )
