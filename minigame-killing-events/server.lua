@@ -9,7 +9,7 @@ AddEventHandler('baseevents:onPlayerDied', function(player, data)
 )
 AddEventHandler('baseevents:onPlayerKilled', function(player, data)
      
-    print(  data  )
+    print(data.killerID)
 end)
 AddEventHandler('baseevents:onPlayerWasted', 
 	function(player, data)
