@@ -27,3 +27,9 @@ Citizen.CreateThread(
         end
     end
 )
+local boxZone = BoxZone:Create(vector3(pointOnMap.x, pointOnMap.y, pointOnMap.z), 3.0, 5.0, {
+    name="box_zone",
+    offset={0.0, 0.0, 0.0},
+    scale={1.0, 1.0, 1.0},
+    debugPoly=false,
+})
