@@ -31,5 +31,5 @@ local boxZone = BoxZone:Create(vector3(pointOnMap.x, pointOnMap.y, pointOnMap.z)
     name="box_zone",
     offset={0.0, 0.0, 0.0},
     scale={1.0, 1.0, 1.0},
-    debugPoly=false,
+    debugPoly=true,
 })
