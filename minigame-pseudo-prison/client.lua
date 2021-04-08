@@ -1,4 +1,6 @@
 local pointOnMap = vector3(-1972.0, 2573.0, 4.0)
+local maxDistance = 25
+
 Citizen.CreateThread(
     function()
         while true do
@@ -6,7 +8,7 @@ Citizen.CreateThread(
             local playerPed = PlayerPedId()
             
             local playerCoords = GetEntityCoords(playerPed)
-            local maxDistance = 25
+            
             local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
             if currentDistance > maxDistance then
                 ApplyDamageToPed(playerPed, 1, false)
@@ -27,9 +29,7 @@ Citizen.CreateThread(
         end
     end
 )
-local boxZone = BoxZone:Create(vector3(pointOnMap.x, pointOnMap.y, pointOnMap.z), 3.0, 5.0, {
-    name="box_zone",
-    offset={0.0, 0.0, 0.0},
-    scale={1.0, 1.0, 1.0},
-    debugPoly=true,
+local circleZone = CircleZone:Create(vector3(pointOnMap.x, pointOnMap.y, pointOnMap.z), maxDistance, {
+    name="circle_zone",
+    debugPoly=false,
 })
