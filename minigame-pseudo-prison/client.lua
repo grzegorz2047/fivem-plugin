@@ -31,5 +31,5 @@ Citizen.CreateThread(
 )
 local circleZone = CircleZone:Create(vector3(pointOnMap.x, pointOnMap.y, pointOnMap.z), maxDistance, {
     name="circle_zone",
-    debugPoly=false,
+    debugPoly=true,
 })
