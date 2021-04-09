@@ -8,7 +8,7 @@ local function OnPlayerConnecting(name, setKickReason, deferrals)
 		logins = {}
 		logins["players"] = {}
 	end
-	table.insert(logins["players"], {"name": name})
+	table.insert(logins["players"], {"name" = name})
 	exports.minigame-commons:saveJson('logins.json', logins)
 --     local player = source
 --     local steamIdentifier
