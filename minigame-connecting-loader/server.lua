@@ -8,7 +8,7 @@ local function OnPlayerConnecting(plname, setKickReason, deferrals)
 		logins = {}
 		logins["players"] = {}
 	end
-	local loginData = {name = plname, ab = 122 }
+	local loginData = {name = plname, loginDate = os.date("%x", os.time()) }
 	table.insert(logins["players"], loginData)
 	exports.minigameCommons:saveJson('logins.json', logins)
 --     local player = source
