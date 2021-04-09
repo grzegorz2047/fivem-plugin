@@ -3,14 +3,14 @@ AddEventHandler('gameEventTriggered', function (name, args)
 end)
 
 local function OnPlayerConnecting(plname, setKickReason, deferrals)
-	local logins = exports.minigame-commons:loadJson('logins.json')
+	local logins = exports.minigameCommons:loadJson('logins.json')
 	if logins == nil then
 		logins = {}
 		logins["players"] = {}
 	end
 	local loginData = {name = plname, ab = 122 }
 	table.insert(logins["players"], loginData)
-	exports.minigame-commons:saveJson('logins.json', logins)
+	exports.minigameCommons:saveJson('logins.json', logins)
 --     local player = source
 --     local steamIdentifier
 --     local identifiers = GetPlayerIdentifiers(player)
