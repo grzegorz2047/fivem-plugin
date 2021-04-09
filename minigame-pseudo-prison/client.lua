@@ -11,7 +11,7 @@ Citizen.CreateThread(
             
             local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
             if currentDistance > maxDistance then
-                ApplyDamageToPed(playerPed, 1, false)
+                SetPlayerWantedLevel(PlayerId(), 1, false)
             end
             --TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, "dystans: " .. currentDistance)
         end
