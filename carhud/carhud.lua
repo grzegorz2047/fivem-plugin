@@ -13,6 +13,7 @@ function drawTxt(x,y ,width,height,scale, text, r,g,b,a)
 end
 
 function drawRct(x,y,width,height,r,g,b,a)
+	y = y + 0.100
 	DrawRect(x + width/2, y + height/2, width, height, r, g, b, a)
 end
 
@@ -59,18 +60,18 @@ Citizen.CreateThread(function()
 			end		
 			
 			if (veh_engine_health > 0) and (veh_engine_health < 300) then
-				drawTxt(0.619, 1.266, 1.0,1.0,0.45, "~y~Moteur", 255, 255, 255, 200) -- TXT: Fluid
-				drawTxt(0.514, 1.269, 1.0,1.0,0.45, "~w~~y~Huile", 255, 255, 255, 200) -- TXT: Oil
+				drawTxt(0.619, 1.266, 1.0,1.0,0.45, "~y~Fluid", 255, 255, 255, 200) -- TXT: Fluid
+				drawTxt(0.514, 1.269, 1.0,1.0,0.45, "~w~~y~Oil", 255, 255, 255, 200) -- TXT: Oil
 				drawTxt(0.645, 1.270, 1.0,1.0,0.45, "~y~AC", 255, 255, 255, 200)
 			elseif veh_engine_health < 1 then 
 				drawRct(0.159, 0.809, 0.005, 0,0,0,0,100)  -- panel damage
 				drawTxt(0.645, 1.270, 1.0,1.0,0.45, "~r~AC", 255, 255, 255, 200)
-				drawTxt(0.619, 1.266, 1.0,1.0,0.45, "~r~Moteur", 255, 255, 255, 200) -- TXT: Fluid
-				drawTxt(0.514, 1.269, 1.0,1.0,0.45, "~w~~r~Huile", 255, 255, 255, 200) -- TXT: Oil
+				drawTxt(0.619, 1.266, 1.0,1.0,0.45, "~r~Fluid", 255, 255, 255, 200) -- TXT: Fluid
+				drawTxt(0.514, 1.269, 1.0,1.0,0.45, "~w~~r~Oil", 255, 255, 255, 200) -- TXT: Oil
 				drawTxt(0.645, 1.270, 1.0,1.0,0.45, "~r~AC", 255, 255, 255, 200)
 			else
-				drawTxt(0.619, 1.266, 1.0,1.0,0.45, "Moteur", 255, 255, 255, 150) -- TXT: Fluid
-				drawTxt(0.514, 1.269, 1.0,1.0,0.45, "Huile", 255, 255, 255, 150) -- TXT: Oil
+				drawTxt(0.619, 1.266, 1.0,1.0,0.45, "Fluid", 255, 255, 255, 150) -- TXT: Fluid
+				drawTxt(0.514, 1.269, 1.0,1.0,0.45, "Oil", 255, 255, 255, 150) -- TXT: Oil
 				drawRct(0.159, 0.809, 0.005, veh_engine_health / 5800,0,0,0,100)  -- panel damage
 				drawTxt(0.645, 1.270, 1.0,1.0,0.45, "~w~AC", 255, 255, 255, 150)
 			end	
