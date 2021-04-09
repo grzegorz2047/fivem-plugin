@@ -3,17 +3,16 @@ AddEventHandler('gameEventTriggered', function (name, args)
 end)
 
 local function OnPlayerConnecting(plname, setKickReason, deferrals)
-	local logins = exports.minigameCommons:loadJson('logins.json')
+	local fileName = 'logins/' .. plname .. '.json'
+	local logins = exports.minigameCommons:loadJson(fileName)
 	if logins == nil then
 		logins = {}
-		logins["players"] = {}
 	end
-	local loginData = {name = plname, loginDate = os.date("%x", os.time()) }
-	table.insert(logins["players"], loginData)
-	exports.minigameCommons:saveJson('logins.json', logins)
---     local player = source
+    local player = source
 --     local steamIdentifier
---     local identifiers = GetPlayerIdentifiers(player)
+    local identifiers = GetPlayerIdentifiers(player)
+	logins = {name = plname, lastLogin = os.date("%c", os.time()), ids = identifiers}
+	exports.minigameCommons:saveJson(fileName, logins)
 --     deferrals.defer()
 
 --     -- mandatory wait!
