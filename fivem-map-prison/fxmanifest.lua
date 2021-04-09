@@ -6,7 +6,7 @@ author 'Cfx.re <root@cfx.re>'
 description 'Example spawn points for FiveM with a prison model.'
 repository 'https://github.com/citizenfx/cfx-server-data'
 
-resource_type 'map' { gameTypes = { ['prison'] = true } }
+resource_type 'map' { gameTypes = { ['prison-gamemode'] = true } }
 
 map 'map.lua'
 
