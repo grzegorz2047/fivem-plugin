@@ -1,5 +1,6 @@
 function drawTxt(x,y ,width,height,scale, text, r,g,b,a)
-    SetTextFont(4)
+    y = y - 0.010
+	SetTextFont(4)
     SetTextProportional(0)
     SetTextScale(scale, scale)
     SetTextColour(r, g, b, a)
@@ -13,7 +14,7 @@ function drawTxt(x,y ,width,height,scale, text, r,g,b,a)
 end
 
 function drawRct(x,y,width,height,r,g,b,a)
-	y = y + 0.100
+	y = y - 0.010
 	DrawRect(x + width/2, y + height/2, width, height, r, g, b, a)
 end
 
