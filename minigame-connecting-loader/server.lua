@@ -3,7 +3,7 @@ AddEventHandler('gameEventTriggered', function (name, args)
 end)
 
 local function OnPlayerConnecting(plname, setKickReason, deferrals)
-	local fileName = 'logins/' .. plname .. '.json'
+	local fileName = './logins/' .. plname .. '.json'
 	local logins = exports.minigameCommons:loadJson(fileName)
 	if logins == nil then
 		logins = {}
