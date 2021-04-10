@@ -18,6 +18,6 @@ AddEventHandler('tut:spawnEvent',
         local y = 2313.0
         local z = 33.0
         teleport(playerPed, x, y, z)
-		sendMessage("Przeteleportowano na spawn! " .. args)
+		sendMessage("Przeteleportowano na spawn!")
 	end
 )
