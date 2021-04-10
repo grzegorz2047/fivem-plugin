@@ -4,7 +4,7 @@ local function sendMessage(text)
     TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, text)
 end
 
-local function teleport(playerPed, x,y z)
+local function teleport(playerPed, x,y, z)
     SetEntityCoords(playerPed, x, y, z, false, false, false, true)
 end
 
