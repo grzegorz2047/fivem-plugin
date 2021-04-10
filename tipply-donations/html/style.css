@@ -6,8 +6,8 @@
 }
 #tipplyIframe {
 	display: block;
-	width: 50%;
-	height: 50%;
+	width: 800px;
+	height: 600px;
 	overflow: hidden;
 	margin-left: auto;
 }
