@@ -19,7 +19,7 @@ AddEventHandler('tut:spawnEvent',
 		local x = -2573.0
         local y = 2313.0
         local z = 33.0
-        teleportWithVehicle(playerPed, x, y, z)
+        teleport(playerPed, x, y, z)
 		sendMessage("Przeteleportowano na spawn!")
 	end
 )
