@@ -1,4 +1,4 @@
-local pointOnMap = vector3(1690.0,  2550.0, 47.0)
+local pointOnMap = vector3(1703.0, 2543.0, 45.0)
 local maxDistance = 25
 
 Citizen.CreateThread(
