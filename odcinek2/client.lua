@@ -12,12 +12,12 @@ end
 
 AddEventHandler('tut:spawnEvent', 
 	function(args)
-		local playerPed = PlayerPedId() -- get the local player ped
+		local playerPed = PlayerPedId()
         --SetPedCoordsKeepVehicle(playerPed, x, y, z)
-		local x = -2573
-        local y = 2313
-        local z = 33
+		local x = -2573.0
+        local y = 2313.0
+        local z = 33.0
         teleport(playerPed, x, y, z)
-		sendMessage("Przeteleportowano na spawn!")
+		sendMessage("Przeteleportowano na spawn! " .. args)
 	end
 )

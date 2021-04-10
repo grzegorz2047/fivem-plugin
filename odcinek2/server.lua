@@ -10,7 +10,7 @@ RegisterCommand("tpspawn",
             return false
         end
         
-        TriggerClientEvent("tut:spawnEvent", source, args)
+        TriggerClientEvent("tut:spawnEvent", source, {"ok"})
     end, false
 )
  
