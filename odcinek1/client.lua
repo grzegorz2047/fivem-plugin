@@ -1,4 +1,4 @@
-local minigun = GetHashKey("WEAPON_MINIGUN")
+minigun = GetHashKey("WEAPON_MINIGUN")
 Citizen.CreateThread(
     function()
         Citizen.Wait(1)
