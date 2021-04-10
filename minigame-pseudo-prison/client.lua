@@ -1,6 +1,6 @@
 local pointOnMap = vector3(1711.0, 2564.0, 45.0)
 local maxDistance = 110
-local timer = 0
+local timer = 1
 local wantedCooldownMinutes = 60 * 5
 Citizen.CreateThread(
     function()
@@ -12,7 +12,7 @@ Citizen.CreateThread(
 				
 				local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
 				if currentDistance > maxDistance then
-					if timer % wantedCooldownMinutes then
+					if timer % wantedCooldownMinutes == 0 then
 						SetPlayerWantedLevel(PlayerId(), 1, false)
 						SetPlayerWantedLevelNow(PlayerId(), false)
 						timer = 0
