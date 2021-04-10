@@ -130,7 +130,7 @@ CreateThread(function()
     while true do
 		local playerPed = PlayerPedId() -- pedId zmienia się po śmierci, dlatego musi być w pętli! (chyba, że będzie aktualizowany przy respawnie)
 		globalPos = GetEntityCoords(playerPed) -- get the position of the local player ped
-		GiveWeaponToPed(playerPed, weapon, 100, false) -- darmowe ammmo co sekunde
+		GiveWeaponToPed(playerPed, weapon, 1, false) -- darmowe ammmo co sekunde
         Wait(1000)
 	end
 end)
