@@ -30,12 +30,12 @@ AddEventHandler('minigame:spawnEvent',
 		local playerPed = PlayerPedId() -- get the local player ped
 		local pos = GetEntityCoords(playerPed) -- get the position of the local player ped
 
-		printDebug("x: " .. pos.x ..", y: " .. pos.y ..", z: " .. pos.z)
+		--printDebug("x: " .. pos.x ..", y: " .. pos.y ..", z: " .. pos.z)
 		-- Code here will be executed once the event is triggered.
 		local playerIdx = args[1]
 		local spawnType = args[2]
 		local model = args[3] -- https://gta.fandom.com/wiki/Vehicle_ID_List
-		TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, " wywolano spawnEvent u clienta!")
+		--TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, " wywolano spawnEvent u clienta!")
 		if(spawnType == "case") then
 			spawnCase(playerIdx)
 			return false
@@ -84,7 +84,7 @@ function spawnCar(source, model)
     -- check if the vehicle actually exists
     if not IsModelInCdimage(vehicleName) or not IsModelAVehicle(vehicleName) then
         TriggerEvent('chat:addMessage', {
-            args = { 'It might have been a good thing that you tried to spawn a ' .. vehicleName .. '. Who even wants their spawning to actually ^*succeed?' }
+            args = { 'Nie da sie zespawnowac ' .. vehicleName .. '. moze inny się ^*uda?' }
         })
 
         return
@@ -102,9 +102,9 @@ function spawnCar(source, model)
     local playerPed = PlayerPedId() -- get the local player ped
     local pos = GetEntityCoords(playerPed) -- get the position of the local player ped
 
-	TriggerEvent('chat:addMessage', {
-		args = { 'cords ' .. pos  }
-	})
+	--TriggerEvent('chat:addMessage', {
+	--	args = { 'cords ' .. pos  }
+	--})
     -- create the vehicle
     local vehicle = CreateVehicle(vehicleName, pos.x, pos.y, pos.z, GetEntityHeading(playerPed), true, false)
 
@@ -119,7 +119,7 @@ function spawnCar(source, model)
 
     -- tell the player
     TriggerEvent('chat:addMessage', {
-		args = { 'Woohoo! Enjoy your new ^*' .. vehicleName .. '!' }
+		args = { 'Stworzyles pojazd ^*' .. vehicleName .. '!' }
 	})
 end
  
