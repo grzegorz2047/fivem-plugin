@@ -9,7 +9,7 @@ AddEventHandler('minigame:teleportEvent',
 		local currentPos = GetEntityCoords(ped)
 		print(currentPos)
 		
-		SetEntityCoords(ped, 1689.0, 2510.0, 45.0, false, false, false, true)
+		SetEntityCoords(ped, 1711.0, 2564.0, 45.0, false, false, false, true)
 		
 		currentPos = GetEntityCoords(ped)
 		TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, "Przeteleportowano do " .. currentPos)
