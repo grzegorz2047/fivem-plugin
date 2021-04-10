@@ -3,7 +3,7 @@ function isPlayer(source)
 	return source > 0
 end
 
-RegisterCommand("spawn", 
+RegisterCommand("tpspawn", 
     function(source, args, rawCommand)
         if not isPlayer(source) then
             print("komenda tylko dla gracza!")
