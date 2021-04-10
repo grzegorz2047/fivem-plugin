@@ -12,7 +12,7 @@ game 'gta5'
     'images/background.jpg',
     'css/bankgothic.ttf',
     'loadscreen.jpg',
-	'music/Loading.ogg',
+	'music/Loading.mp3',
 	'images/logo.png',
 	
 }

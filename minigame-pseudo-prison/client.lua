@@ -1,5 +1,5 @@
 local pointOnMap = vector3(1711.0, 2564.0, 45.0)
-local maxDistance = 90
+local maxDistance = 110
 
 Citizen.CreateThread(
     function()
@@ -18,6 +18,13 @@ Citizen.CreateThread(
         end
     end
 )
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(1)
+		SetRelationshipBetweenGroups(1, GetHashKey("AMBIENT_GANG_BALLAS"), GetHashKey("PLAYER"))
+		SetRelationshipBetweenGroups(1, GetHashKey("PLAYER"), GetHashKey("AMBIENT_GANG_BALLAS"))
+	end
+end)
 Citizen.CreateThread(
     function()
         while true do
