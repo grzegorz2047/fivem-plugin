@@ -10,7 +10,7 @@ Citizen.CreateThread(
 		while true do
 			Citizen.Wait(0)
  			if IsControlJustPressed(1, 323) then
-				local playerName = GetPlayerName(GetPlayerPed(-1))
+				local playerName = GetPlayerName(PlayerPedId())
 				displayVal = playerName
 				colorVal = "blue"
 				SendNUIMessage({
