@@ -7,7 +7,7 @@ $(function(){
 			if (item !== undefined && item.type === "UI") {
              
 				 $("#top-left-square").value = display;
-				 $("#top-right-square").css("background-color", color); 
+				 $("#bottom-right-square").css("background-color", color); 
 			}
 		});
 	};
