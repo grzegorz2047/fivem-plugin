@@ -1,14 +1,15 @@
 local displayVal = "Tekst tutka"
 local colorVal = "green"
 Citizen.CreateThread(
-	function()
-		SendNUIMessage({
-			type = "UI",
-			display = displayVal,
-			color = colorVal
-		})
+	while true do
+		function()
+			SendNUIMessage({
+				type = "UI",
+				display = displayVal,
+				color = colorVal
+			})
+		end
 	end
-	
 )
 Citizen.CreateThread(
 	function()
