@@ -10,7 +10,8 @@ Citizen.CreateThread(
 		while true do
 			Citizen.Wait(0)
  			if IsControlJustPressed(1, 323) then
-				displayVal = "Tekst dutka"
+				local playerName = GetPlayerName(GetPlayerPed(-1))
+				displayVal = playerName
 				colorVal = "blue"
 				SendNUIMessage({
 					type = "speedometr",
