@@ -3,9 +3,9 @@ $(function(){
         
 		window.addEventListener('message', (event) => {
 			var item = event.data;
-			if (item !== undefined && item.type === "UI") {
+			if (item !== undefined && item.type === "speedometr") {
 				 $("#bottom-left-square").text(item.display);
-				 $("#bottom-right-square").css("background-color", item.color); 
+				 $("#top-right-square").css("background-color", item.color); 
 			}
 		});
 	};

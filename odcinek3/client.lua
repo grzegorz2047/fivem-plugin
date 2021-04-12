@@ -1,5 +1,5 @@
 local displayVal = "Tekst tutka"
-local colorVal = "green"
+local colorVal = "black"
 SendNUIMessage({
 	type = "UI",
 	display = displayVal,
@@ -11,18 +11,18 @@ Citizen.CreateThread(
 			Citizen.Wait(0)
  			if IsControlJustPressed(1, 323) then
 				displayVal = "Tekst dutka"
-				colorVal = "red"
+				colorVal = "blue"
 				SendNUIMessage({
-					type = "UI",
+					type = "speedometr",
 					display = displayVal,
 					color = colorVal
 				})
 			end
 			if IsControlJustReleased(1, 323) then
 				displayVal = "Tekst tutka"
-				colorVal = "green"
+				colorVal = "black"
 				SendNUIMessage({
-					type = "UI",
+					type = "speedometr",
 					display = displayVal,
 					color = colorVal
 				})
