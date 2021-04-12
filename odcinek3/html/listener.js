@@ -4,7 +4,7 @@ $(function(){
 		window.addEventListener('message', (event) => {
 			var item = event.data;
 			if (item !== undefined && item.type === "UI") {
-				 $("#top-left-square").text = item.display;
+				 $("#-left-square").text = item.display;
 				 $("#bottom-right-square").css("background-color", item.color); 
 			}
 		});
