@@ -1,8 +1,10 @@
 local pointOnMap = vector3(1703.0, 2507.0, 46.0)
 local areaSize = 2.0
-local function isClose()
-local showInfo = false
-
+local function isClose(targetPoint, distanceBetween)
+	local playerPed = PlayerPedId()
+	local sourcePlayerCoords = GetEntityCoords(playerPed)
+	local currentDistance = GetDistanceBetweenCoords(sourcePlayerCoords, targetPoint, false)
+	return currentDistance < distanceBetween
 end
 milis = 1
 Citizen.CreateThread(
@@ -13,19 +15,17 @@ Citizen.CreateThread(
 			if showInfo then
 				exports.libCommons:nativeMessage("Wciśnij ~INPUT_CELLPHONE_CAMERA_EXPRESSION~ aby wykonać akcję!")
 			end
-			local playerPed = PlayerPedId()
-             --warto przeniesc logike na serwer
-			local playerCoords = GetEntityCoords(playerPed)
+
 			if milis % 100 == 0 then
-				local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
-				if currentDistance < areaSize then
+				
+				if isClose(pointOnMap, areaSize) then
 					showInfo = true
 				else
 					showInfo = false
 				end
 				milis = 1
 			end
-			milis = milis +1
+			milis = milis + 1
         end
     end
 )
