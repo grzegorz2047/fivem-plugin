@@ -20,7 +20,6 @@ Citizen.CreateThread(
 				local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
 				if currentDistance < areaSize then
 					showInfo = true
-				end
 				else
 					showInfo = false
 				end
