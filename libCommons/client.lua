@@ -10,14 +10,14 @@ end)
 
 exports('sendMessage', function(text)
     TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, text)
-end
+end)
 
 exports('teleport', function(playerPed, x,y, z)
     SetEntityCoords(playerPed, x, y, z, false, false, false, true)
-end
+end)
 exports('teleportWithVehicle', function(playerPed, x,y, z)
     SetPedCoordsKeepVehicle(playerPed, x, y, z)
-end
+end)
 
 exports('notify', function(string)
     SetNotificationTextEntry("STRING")
