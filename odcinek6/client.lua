@@ -18,6 +18,7 @@ Citizen.CreateThread(
 			end
 			if IsControlJustPressed(1, 111) then
 				pointOnMap.z = pointOnMap.z + 1.0
+				exports.libCommons:sendMessage(pointOnMap.z)
 			end
 			if IsControlJustPressed(1, 110) then
 				pointOnMap.z = pointOnMap.z - 1.0

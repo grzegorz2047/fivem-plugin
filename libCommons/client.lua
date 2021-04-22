@@ -8,6 +8,17 @@ exports('nativeMessage', function(lineOne, lineTwo, lineThree, duration)
     EndTextCommandDisplayHelp(0, false, true, duration or 5000)
 end)
 
+exports('sendMessage', function(text)
+    TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, text)
+end
+
+exports('teleport', function(playerPed, x,y, z)
+    SetEntityCoords(playerPed, x, y, z, false, false, false, true)
+end
+exports('teleportWithVehicle', function(playerPed, x,y, z)
+    SetPedCoordsKeepVehicle(playerPed, x, y, z)
+end
+
 exports('notify', function(string)
     SetNotificationTextEntry("STRING")
     AddTextComponentString(string)
