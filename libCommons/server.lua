@@ -3,7 +3,7 @@
 exports('saveJson', function(filePath, data)
 	local loadFile = LoadResourceFile(GetCurrentResourceName(), filePath)
 	SaveResourceFile(GetCurrentResourceName(), filePath, json.encode(data), -1)
-	print("Zapisano! " .. data .. " w " .. filePath)
+	print("Zapisano! " .. json.encode(data) .. " w " .. filePath)
 end)
 
 exports('loadJson', function(filePath)
