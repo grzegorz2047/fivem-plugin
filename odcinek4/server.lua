@@ -5,37 +5,9 @@ local function OnPlayerConnecting(plname, setKickReason, deferrals)
 		logins = {}
 	end
     local player = source
---     local steamIdentifier
     local identifiers = GetPlayerIdentifiers(player)
 	logins = {name = plname, lastLogin = os.date("%c", os.time()), ids = identifiers}
 	exports.libCommons:saveJson(fileName, logins)
---     deferrals.defer()
-
---     -- mandatory wait!
---     Wait(0)
-
---     deferrals.update(string.format("Hello %s. Your Steam ID is being checked.", name))
-
---     for _, v in pairs(identifiers) do
---         print(v)
---         if string.find(v, "steam") then
---             steamIdentifier = v
---             break
---         end
---     end
-
---     -- mandatory wait!
---     Wait(0)
-
---     if not steamIdentifier then
---         deferrals.done("You are not connected to Steam.")
---     else
---         deferrals.done()
---     end
  end
 
 AddEventHandler("playerConnecting", OnPlayerConnecting)
-
-AddEventHandler("playerSpawned", function(spawn)
-    TriggerServerEvent("ldr:spawnplayer")	
-end)
