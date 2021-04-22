@@ -7,7 +7,7 @@ Citizen.CreateThread(
     function()
         while true do
             Citizen.Wait(0)
-            drawMarker(pointOnMap, 43)
+            drawMarker(pointOnMap, 28)
         end
     end
 )
