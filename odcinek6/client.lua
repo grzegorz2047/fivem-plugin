@@ -20,7 +20,7 @@ Citizen.CreateThread(
 				pointOnMap = vector3(pointOnMap.x, pointOnMap.y + 1.0, pointOnMap.z)
 				exports.libCommons:sendMessage(pointOnMap.z)
 			end
-			if IsControlJustPressed(1, 110) then
+			if IsControlJustPressed(1, 112) then
 				pointOnMap = vector3(pointOnMap.x, pointOnMap.y - 1.0, pointOnMap.z)
 			end		
 			if IsControlJustPressed(1, 108) then
@@ -29,11 +29,8 @@ Citizen.CreateThread(
 			if IsControlJustPressed(1, 109) then
 				pointOnMap = vector3(pointOnMap.x - 1.0, pointOnMap.y, pointOnMap.z )
 			end
-			if IsControlJustPressed(1, 112) then
-				pointOnMap = vector3(pointOnMap.x, pointOnMap.y, pointOnMap.z + 1.0)
-			end
+		 
 			if milis % 10 == 0 then
-				
 				if isClose(pointOnMap, areaSize) then
 					showInfo = true
 				else
