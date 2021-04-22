@@ -22,6 +22,12 @@ Citizen.CreateThread(
 			end
 			if IsControlJustPressed(1, 110) then
 				pointOnMap = vector3(pointOnMap.x, pointOnMap.y, pointOnMap.z - 1.0)
+			end		
+			if IsControlJustPressed(1, 108) then
+				pointOnMap = vector3(pointOnMap.x + 1.0, pointOnMap.y, pointOnMap.z)
+			end
+			if IsControlJustPressed(1, 109) then
+				pointOnMap = vector3(pointOnMap.x - 1.0, pointOnMap.y, pointOnMap.z )
 			end
 			if milis % 10 == 0 then
 				
