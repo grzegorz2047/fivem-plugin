@@ -1,5 +1,6 @@
 local pointOnMap = vector3(1703.0, 2507.0, 46.0)
 local areaSize = 2.0
+local markerType = 28 -- 28 sphere
 local function isClose(targetPoint, distanceBetween)
 	local playerPed = PlayerPedId()
 	local sourcePlayerCoords = GetEntityCoords(playerPed)
@@ -16,7 +17,7 @@ Citizen.CreateThread(
 				exports.libCommons:nativeMessage("Wciśnij ~INPUT_CELLPHONE_CAMERA_EXPRESSION~ aby wykonać akcję!")
 			end
 
-			if milis % 100 == 0 then
+			if milis % 10 == 0 then
 				
 				if isClose(pointOnMap, areaSize) then
 					showInfo = true
