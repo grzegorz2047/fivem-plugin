@@ -4,7 +4,7 @@ local function isClose()
 	
 
 end
-RegisterNetEvent("myCoordinates")
+milis = 1
 Citizen.CreateThread(
     function()
         while true do
@@ -13,13 +13,13 @@ Citizen.CreateThread(
 			local playerPed = PlayerPedId()
              --warto przeniesc logike na serwer
 			local playerCoords = GetEntityCoords(playerPed)
-				
-			local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
-			if currentDistance < areaSize then
-				exports.libCommons:nativeMessage("Wciśnij ~INPUT_CELLPHONE_CAMERA_EXPRESSION~ aby wykonać akcję!")
-				TriggerServerEvent("myCoordinates", playerPed)
+			if milis % 100 == 0 then
+				local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
+				if currentDistance < areaSize then
+					exports.libCommons:nativeMessage("Wciśnij ~INPUT_CELLPHONE_CAMERA_EXPRESSION~ aby wykonać akcję!")
+				end
+				milis = 1
 			end
-			
         end
     end
 )
