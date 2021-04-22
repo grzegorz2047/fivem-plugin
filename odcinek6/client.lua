@@ -17,11 +17,11 @@ Citizen.CreateThread(
 				exports.libCommons:nativeMessage("Wciśnij ~INPUT_CELLPHONE_CAMERA_EXPRESSION~ aby wykonać akcję!")
 			end
 			if IsControlJustPressed(1, 111) then
-				pointOnMap = vector3(pointOnMap.x, pointOnMap.y + 1.0, pointOnMap.z)
+				pointOnMap = vector3(pointOnMap.x, pointOnMap.y - 1.0, pointOnMap.z)
 				exports.libCommons:sendMessage(pointOnMap.z)
 			end
 			if IsControlJustPressed(1, 112) then
-				pointOnMap = vector3(pointOnMap.x, pointOnMap.y - 1.0, pointOnMap.z)
+				pointOnMap = vector3(pointOnMap.x, pointOnMap.y + 1.0, pointOnMap.z)
 			end		
 			if IsControlJustPressed(1, 108) then
 				pointOnMap = vector3(pointOnMap.x + 1.0, pointOnMap.y, pointOnMap.z)
