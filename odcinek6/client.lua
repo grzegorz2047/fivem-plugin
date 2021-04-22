@@ -1,6 +1,6 @@
 local pointOnMap = vector3(1703.0, 2507.0, 46.0)
-local function drawMarker(pointOnMap, markerType, size) 
-	DrawMarker(markerType, pointOnMap.x, pointOnMap.y, pointOnMap.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.75, 2, 1.75, 204, 204, 0, 100, false, true, 2, false, false, false, false)
+local function drawMarker(pointOnMap, markerType, markerSize) 
+	DrawMarker(markerType, pointOnMap.x, pointOnMap.y, pointOnMap.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, markerSize, markerSize, markerSize, 204, 204, 0, 100, false, true, 2, false, false, false, false)
 end 
  
 Citizen.CreateThread(
