@@ -20,6 +20,7 @@ Citizen.CreateThread(
 				end
 				milis = 1
 			end
+			milis = milis +1
         end
     end
 )
