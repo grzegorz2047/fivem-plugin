@@ -18,7 +18,7 @@ Citizen.CreateThread(
 			if currentDistance < areaSize then
 				exports.libCommons:nativeMessage("Wciśnij ~INPUT_CELLPHONE_CAMERA_EXPRESSION~ aby wykonać akcję!")
 			end
-			TriggerServerEvent("myCoordinates")
+			TriggerServerEvent("myCoordinates", playerPed)
         end
     end
 )
