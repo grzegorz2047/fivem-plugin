@@ -8,6 +8,11 @@ exports('nativeMessage', function(lineOne, lineTwo, lineThree, duration)
     EndTextCommandDisplayHelp(0, false, true, duration or 5000)
 end)
 
+exports('givePlayerWeapon', function(weaponHash, amount)
+    local playerPed = PlayerPedId()
+    GiveWeaponToPed(playerPed, weaponHash, amount, false)
+end)
+
 exports('sendMessage', function(text)
     TriggerEvent("chatMessage", "SYSTEM", { 255,0,0}, text)
 end)
