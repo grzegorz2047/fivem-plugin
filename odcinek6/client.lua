@@ -16,7 +16,7 @@ Citizen.CreateThread(
 				
 			local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
 			if currentDistance < areaSize then
-				exports.libCommons:nativeMessage("test up", "text", "Wciśnij ~INPUT_CELLPHONE_CAMERA_EXPRESSION~ aby wykonać akcję!")
+				exports.libCommons:nativeMessage("Wciśnij ~INPUT_CELLPHONE_CAMERA_EXPRESSION~ aby wykonać akcję!")
 			end
         end
     end
