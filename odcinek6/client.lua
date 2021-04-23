@@ -7,14 +7,14 @@ local function isClose(targetPoint, distanceBetween)
 	local playerPed = PlayerPedId()
 	local sourcePlayerCoords = GetEntityCoords(playerPed)
 	local currentDistance = GetDistanceBetweenCoords(sourcePlayerCoords, targetPoint, false)
-	return currentDistance < distanceBetween
+	return currentDistance <= distanceBetween
 end
 milis = 1
 Citizen.CreateThread(
     function()
         while true do
             Citizen.Wait(0)
-            exports.libCommons:drawMarker(pointOnMap, 28, areaSize)
+            exports.libCommons:drawMarker(pointOnMap, markerType, areaSize)
 			if isInArea then
 				exports.libCommons:nativeMessage("Wciśnij ~INPUT_CELLPHONE_CAMERA_EXPRESSION~ aby otrzymać 10 naboi do SMG!")
 				if IsControlJustPressed(1, 323) then
