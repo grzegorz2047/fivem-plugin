@@ -4,7 +4,12 @@ local playerData = {}
 
  
 local function hasPassedMinutes(playerTime, minutes)
-    return ((os.time() - playerTime)/1000/60) >= minutes
+    milis = (os.time() - playerTime)
+    print("milis " .. milis)
+    seconds = milis/1000
+    print(seconds)
+    passedMinutes = seconds/60
+    return passedMinutes >= minutes
 end
 
 local function DistanceBetweenCoords (coordsA, coordsB, useZ)
