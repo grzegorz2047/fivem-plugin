@@ -1,3 +1,9 @@
+local function ShowCoordinates(source)
+    local ped = GetPlayerPed(player)
+    local playerCoords = GetEntityCoords(ped)
+
+    print(playerCoords) -- vector3(...)
+end
 Citizen.CreateThread(function()
     while true do
         for _, playerId in ipairs(GetPlayers()) do
@@ -9,10 +15,5 @@ Citizen.CreateThread(function()
       Citizen.Wait(1000)
     end
   end)
-local function ShowCoordinates(source)
-    local ped = GetPlayerPed(player)
-    local playerCoords = GetEntityCoords(ped)
 
-    print(playerCoords) -- vector3(...)
-end
  
