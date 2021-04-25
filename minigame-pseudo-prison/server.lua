@@ -1,5 +1,5 @@
 local function ShowCoordinates(source)
-    local ped = GetPlayerPed(player)
+    local ped = GetPlayerPed(source)
     local playerCoords = GetEntityCoords(ped)
 
     print(playerCoords) -- vector3(...)
