@@ -47,10 +47,10 @@ Citizen.CreateThread(function()
                     playerData[ped] = os.time()
                     print("Dodano gracza do obserwowanych " .. ped)
                 end
-                if hasPassedMinutes(playerData[ped], 2) then
+                if hasPassedMinutes(playerData[ped], 1) then
                     playerData[ped] = os.time()
                     print("Minelo 2 minuty dla " .. ped)
-                    exports.money.addMoney(id, "cash", 1000)
+                    exports.money:addMoney(id, "cash", 1000)
                 end
             else
                 if not (playerData[ped] == nil) then
