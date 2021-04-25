@@ -27,8 +27,9 @@ local function isOutsideOfPrison(ped)
 end
 AddEventHandler('playerDropped', function (reason)
     print('Player ' .. GetPlayerName(source) .. ' dropped (Reason: ' .. reason .. ')')
-    playerData[ped] = nil 
     local ped = GetPlayerPed(source)
+    playerData[ped] = nil 
+
     print("Usunieto gracza z obserwowanych " .. ped)
   end)
 
