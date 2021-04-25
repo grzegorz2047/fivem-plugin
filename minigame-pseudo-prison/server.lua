@@ -13,12 +13,24 @@ local function hasPassedMinutes(playerTime, minutes)
     return ((os.time - playerTime)/1000/60) >= minutes
 end
 
+local function DistanceBetweenCoords (coordsA, coordsB, useZ)
+    -- language faster equivalent:
+    local firstVec = vector3(coordsA.x, coordsA.y, coordsA.z)
+    local secondVec = vector3(coordsB.x, coordsB.y, coordsB.z)
+    if useZ then
+        return #(firstVec - secondVec)
+    else 
+        return #(firstVec.xy - secondVec.xy)
+    end
+end
+
 local function isOutsideOfPrison(ped)
     local playerCoords = GetEntityCoords(ped)
     local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
     print("disctance " .. currentDistance)
     return currentDistance > maxDistance     
 end
+
 
 Citizen.CreateThread(function()
     while true do
