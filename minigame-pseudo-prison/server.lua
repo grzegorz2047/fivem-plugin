@@ -25,7 +25,12 @@ local function isOutsideOfPrison(ped)
     local currentDistance = DistanceBetweenCoords(playerCoords, pointOnMap, false)
     return currentDistance > maxDistance     
 end
-
+AddEventHandler('playerDropped', function (reason)
+    print('Player ' .. GetPlayerName(source) .. ' dropped (Reason: ' .. reason .. ')')
+    playerData[ped] = nil 
+    local ped = GetPlayerPed(source)
+    print("Usunieto gracza z obserwowanych " .. ped)
+  end)
 
 Citizen.CreateThread(function()
     while true do
@@ -44,7 +49,7 @@ Citizen.CreateThread(function()
                 end
             else
                 playerData[ped] = nil 
-                print("Usunieto gracza z obserwowanych " .. ped)
+                print("Usunieto gracza z obserwowanych bo wrocil" .. ped)
             end
         end
       Citizen.Wait(1000)
