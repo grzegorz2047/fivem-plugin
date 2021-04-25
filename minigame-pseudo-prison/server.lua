@@ -13,7 +13,7 @@ local function hasPassedMinutes(playerTime, minutes)
     return ((os.time - playerTime)/1000/60) >= minutes
 end
 
-isOutsideOfPrison(ped) {
+local function isOutsideOfPrison(ped) {
     local playerCoords = GetEntityCoords(ped)
     local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
     print("disctance " .. currentDistance)
