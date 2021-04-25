@@ -34,6 +34,7 @@ Citizen.CreateThread(function()
             if isOutsideOfPrison(ped) then
                 if playerData[ped] == nil then
                     playerData[ped] = os.time()
+                    print("Dodano gracza do obserwowanych " .. ped)
                 end
                 if hasPassedMinutes(playerData[ped], 5) then
                     playerData[ped] = os.time()
@@ -41,6 +42,7 @@ Citizen.CreateThread(function()
                 end
             else
                 playerData[ped] = nil 
+                print("Usunieto gracza z obserwowanych " .. ped)
             end
         end
       Citizen.Wait(1000)
