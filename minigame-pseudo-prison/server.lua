@@ -2,13 +2,7 @@ local pointOnMap = vector3(1711.0, 2564.0, 45.0)
 local maxDistance = 110
 local playerData = {}
 
-local function ShowCoordinates(source)
-    local ped = GetPlayerPed(source)
-    local playerCoords = GetEntityCoords(ped)
-
-    print(playerCoords) -- vector3(...)
-end
-
+ 
 local function hasPassedMinutes(playerTime, minutes)
     return ((os.time() - playerTime)/1000/60) >= minutes
 end
@@ -37,7 +31,6 @@ Citizen.CreateThread(function()
         for i = 0, players - 1 do
             local id = GetPlayerFromIndex(i)
             local ped = GetPlayerPed(id)
-            ShowCoordinates(ped)
             if isOutsideOfPrison(ped) then
                 if playerData[ped] == nil then
                     playerData[ped] = os.time()
