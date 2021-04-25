@@ -26,7 +26,7 @@ end
 
 local function isOutsideOfPrison(ped)
     local playerCoords = GetEntityCoords(ped)
-    local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
+    local currentDistance = DistanceBetweenCoords(playerCoords, pointOnMap, false)
     print("disctance " .. currentDistance)
     return currentDistance > maxDistance     
 end
