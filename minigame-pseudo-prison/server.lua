@@ -48,7 +48,7 @@ Citizen.CreateThread(function()
                     print("Minelo 5 minut dla " .. ped)
                 end
             else
-                playerData.remove(ped) 
+                playerData[ped] = nil 
             end
         end
       Citizen.Wait(1000)
