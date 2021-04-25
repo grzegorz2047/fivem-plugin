@@ -53,7 +53,7 @@ Citizen.CreateThread(function()
                     exports.money.addMoney(id, "cash", 1000)
                 end
             else
-                if playerData[ped] not nil then
+                if not (playerData[ped] == nil) then
                     playerData[ped] = nil 
                     print("Usunieto gracza z obserwowanych bo wrocil" .. ped)
                 end
