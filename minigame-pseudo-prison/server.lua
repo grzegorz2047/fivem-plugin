@@ -4,10 +4,7 @@ local playerData = {}
 
  
 local function hasPassedMinutes(playerTime, minutes)
-    milis = (os.time() - playerTime)
-    print("milis " .. milis)
-    seconds = milis/1000
-    print(seconds)
+    seconds = (os.time() - playerTime)
     passedMinutes = seconds/60
     return passedMinutes >= minutes
 end
@@ -41,7 +38,7 @@ Citizen.CreateThread(function()
                     playerData[ped] = os.time()
                     print("Dodano gracza do obserwowanych " .. ped)
                 end
-                if hasPassedMinutes(playerData[ped], 5) then
+                if hasPassedMinutes(playerData[ped], 2) then
                     playerData[ped] = os.time()
                     print("Minelo 5 minut dla " .. ped)
                 end
