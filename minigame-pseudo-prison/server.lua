@@ -18,7 +18,7 @@ local function isOutsideOfPrison(ped)
     local currentDistance = GetDistanceBetweenCoords(playerCoords, pointOnMap, false)
     print("disctance " .. currentDistance)
     return currentDistance > maxDistance     
-}
+end
 
 Citizen.CreateThread(function()
     while true do
